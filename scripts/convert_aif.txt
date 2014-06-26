@@ -1,0 +1,4 @@
+for f in *.wav; do echo "say ${f:3:${#f}-7} -o asn_${f:3:${#f}-7}.aif" ; done
+for f in asn_*.aif; do lame -h m $f ${f:0:${#f}-5}.mp3; done
+
+
